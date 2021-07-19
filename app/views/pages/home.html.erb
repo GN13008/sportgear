@@ -1,6 +1,47 @@
 <div class="banner-home">
   <div class="banner-content">
-    <h1>Welcome to Sport Gear</h1>
-    <p>Find sport gear adapt to your level</p>
+    <div class="content">
+      <h1>Welcome to Sport Gear</h1>
+      <p>Find sport gear adapt to your level</p>
+      <div class="form-group mt-4">
+        <%= form_with url: "/search", method: :get, class: "form-group" do |form| %>
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-6">
+              <%= form.label "Sport Level", "Sport Level", class: "form-control" %>
+            </div>
+            <div class="col-6 col-md-6">
+              <%= form.select "General Sport level", @sport_lvl, 
+                { selected: "", prompt: 'Your water sport level ?' }, 
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-6">
+              <%= form.label "Weight of the rider", "Weight of the rider", class: "form-control" %>
+            </div>
+            <div class="col-6 col-md-6">
+              <%= form.select "Weights", @weights, 
+                { selected: "", prompt: 'Your weights ?' }, 
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-6">
+              <%= form.label "Main Wind range", "Main Wind range", class: "form-control" %>
+            </div>
+            <div class="col-6 col-md-6">
+              <%= form.select "Winds", @winds, 
+                { selected: "", prompt: 'Your Wind range ?' }, 
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+              <h3><%= form.submit "Find The best Gear", class: "btn btn-flat form-cntrol w-100" %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
