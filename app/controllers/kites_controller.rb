@@ -1,0 +1,2 @@
+class KitesController < ApplicationController
+end
