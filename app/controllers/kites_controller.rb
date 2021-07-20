@@ -3,5 +3,7 @@ class KitesController < ApplicationController
 
   def search
     @kites = Kite.all
+    @usr_lvl = params[:sport_lvl]
+    @usr_weight = params[:weights]
   end
 end

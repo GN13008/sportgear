@@ -15,11 +15,21 @@ ActiveRecord::Schema.define(version: 2021_07_19_145602) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.string "logo_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "kites", force: :cascade do |t|
     t.string "model"
     t.string "photo_url"
+    t.string "description"
+    t.bigint "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_kites_on_brand_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +44,5 @@ ActiveRecord::Schema.define(version: 2021_07_19_145602) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "kites", "brands"
 end
