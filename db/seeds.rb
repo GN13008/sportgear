@@ -1,4 +1,5 @@
 puts "----- Cleaning Database -----"
+KiteParameter.destroy_all
 Kite.destroy_all
 Brand.destroy_all
 
@@ -25,3 +26,17 @@ evo = Kite.create(model: "Evo", photo_url: "https://media3.vagueetvent.com/51167
     description: "A small description about this kite", brand_id: duotone.id)
 rebel = Kite.create(model: "Rebel", photo_url: "https://media2.vagueetvent.com/48542-large_default/kite-duotone-rebel-2021.jpg", 
     description: "A small description about this kite", brand_id: duotone.id)
+
+kites = [moto, switchblade, bandit, banditS, rs, evo, rebel]
+
+puts "Adding params accessibility"
+kites.each do |kite|
+    KiteParameter.create(name: "accessibility", kite_id: kite.id, rate: 3)
+end
+
+moto.kite_parameters[0].rate = 8;
+moto.kite_parameters[0].save
+evo.kite_parameters[0].rate = 8;
+evo.kite_parameters[0].save
+bandit.kite_parameters[0].rate = 8;
+bandit.kite_parameters[0].save
