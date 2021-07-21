@@ -20,10 +20,10 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= kite.brand.name %> | <%= kite.model %></h2>
-            <p>Short description here!</p>
+            <p><%= kite.description %></p>
           </div>
           <%# <h2 class="card-trip-pricing">£99.99</h2> %>
-          <img src="<%= kite.brand.logo_url %>" />
+          <img class="card-trip-user" src="<%= kite.brand.logo_url %>" />
         </div>
       </div>
     <% end %>

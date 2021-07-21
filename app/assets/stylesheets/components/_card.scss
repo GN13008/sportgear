@@ -51,12 +51,15 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  p {
+    padding-top: 16px;
+  }
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: 0px;
   width: 40px;
 }
 
