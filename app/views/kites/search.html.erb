@@ -4,9 +4,9 @@
       <h1 class="text-center">Welcome in the Kite world !</h1>
       <p class="text-center mt-4">⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <a href="#">Some school near from you</a> ⚠️</p>
       <hr>
-      <p class="text-justify">As a Kite Beginner of <%= @usr_weight %>, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
+      <p class="text-justify">As a Kite Beginner<%= @usr_weight %>, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
       <p class="text-justify">For this you will need a quiver (gear pack) of 2 kites : a <b>12 meter</b> (12-18 knts) and a <b>9 meter</b> (18-25 knts).<br>You will also need a TT of this <b>size</b>.</p>
-      <p class="text-justify">You say that you have a <%= @usr_lvl %> lvl in other watersports / boardsports ? It's why we have select some gear that could suit you 🔥</p>
+      <p class="text-justify"><%= @usr_lvl %></p>
       <hr>
     </div>
    </div>
@@ -20,10 +20,10 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= kite.brand.name %> | <%= kite.model %></h2>
-            <p>Short description here!</p>
+            <p><%= kite.description %></p>
           </div>
           <%# <h2 class="card-trip-pricing">£99.99</h2> %>
-          <img src="<%= kite.brand.logo_url %>" />
+          <img class="card-trip-user" src="<%= kite.brand.logo_url %>" />
         </div>
       </div>
     <% end %>
