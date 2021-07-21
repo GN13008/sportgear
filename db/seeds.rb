@@ -40,3 +40,5 @@ evo.kite_parameters[0].rate = 8;
 evo.kite_parameters[0].save
 bandit.kite_parameters[0].rate = 8;
 bandit.kite_parameters[0].save
+rs.kite_parameters[0].rate = 6;
+rs.kite_parameters[0].save
