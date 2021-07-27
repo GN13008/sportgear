@@ -2,7 +2,7 @@
   <div class="banner-content">
     <div class="content">
       <h1>Welcome to Sport Gear</h1>
-      <p>You are New in the Kite World ? Find sport gear adapt to your level 🚀</p>
+      <h3>You are New in the Kite World ? Find sport gear adapt to your level 🚀</h3>
       <div class="form-group mt-4">
         <%= form_with url: "/search", method: :get, class: "form-group" do |form| %>
           <div class="row justify-content-center mt-2">
@@ -21,7 +21,7 @@
             </div>
             <div class="col-12 col-md-8">
               <%= form.select "weights", @weights, 
-                { selected: "", prompt: 'Your weights ?' }, 
+                { selected: "", prompt: 'Enter your weights' }, 
                 class: "form-control" %>
             </div>
           </div>
