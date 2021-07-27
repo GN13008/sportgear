@@ -11,13 +11,35 @@
   <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
   <p class="text-justify">For this, you should use a quiver (gear pack) of 2 kites :</p>
   <p class="advertising"><em><%= @usr_weight %></em></p> 
-  <ul>
-    <li><p><b><%= @size_range_12_19 %> meter</b> Kite for a wind range of 12-19 knots.</p></li>
-    <li><p><b><%= @size_range_19_25  %> meter</b> Kite for a wind range of 19-25 knots.</p></li>
-    <li><p>You will also need a TT of this <b>size</b>.(TO IMPLEMENT ON DB)</p></li>
-  </ul>
-  <p class="text-justify"><%= @usr_lvl %></p>
-  <hr>
+  <div class="cards mt-4 mb-4">
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @size_range_12_19 %> meter | 12-19 knots</h2>
+          <p>You should definitively start with this size and range of wind.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @size_range_19_25  %> meter | 19-25 knots</h2>
+          <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <h2>About the Twintip</h2>
+          <p>Some information about the good twintip to start</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p class="text-justify"><%= @usr_lvl %></p>
+    <hr>
+  </div>
 </div>
 <div class="content">
   <h2 class="text-center mt-4">Some kites that you will love</h2>
