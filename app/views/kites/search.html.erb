@@ -3,13 +3,21 @@
     <div class="content">
       <h1 class="text-center">Welcome in the Kite world !</h1>
       <p class="text-center mt-4">⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <a href="#">Some school near from you</a> ⚠️</p>
-      <hr>
-      <p class="text-justify">As a Kite Beginner<%= @usr_weight %>, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
-      <p class="text-justify">For this you will need a quiver (gear pack) of 2 kites : a <b>12 meter</b> (12-18 knts) and a <b>9 meter</b> (18-25 knts).<br>You will also need a TT of this <b>size</b>.</p>
-      <p class="text-justify"><%= @usr_lvl %></p>
-      <hr>
     </div>
    </div>
+</div>
+<div class="content">
+  <hr>
+  <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
+  <p class="text-justify">For this, you should use a quiver (gear pack) of 2 kites :</p>
+  <p class="advertising"><em><%= @usr_weight %></em></p> 
+  <ul>
+    <li><p><b><%= @size_range_12_19 %> meter</b> Kite for a wind range of 12-19 knots.</p></li>
+    <li><p><b><%= @size_range_19_25  %> meter</b> Kite for a wind range of 19-25 knots.</p></li>
+    <li><p>You will also need a TT of this <b>size</b>.(TO IMPLEMENT ON DB)</p></li>
+  </ul>
+  <p class="text-justify"><%= @usr_lvl %></p>
+  <hr>
 </div>
 <div class="content">
   <h2 class="text-center mt-4">Some kites that you will love</h2>

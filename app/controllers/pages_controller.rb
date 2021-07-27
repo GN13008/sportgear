@@ -1,9 +1,11 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :ui ]
 
   def home
     @sport_lvl = ["Beginner", "Regular", "Athletic"]
-    @weights = ["< 55 kg", "55-70 kg", "70-80 kg", "80-95 kg", "> 95 kg"]
-    @winds = ["I have no idea", "12 to 18 knots - Good for begginer", "18 to 25 knots", "12 to 25 knots"]
+    @weights = ["< 55 kg", "55-65 kg", "65-75 kg", "75-85 kg", "85-95 kg", "> 95 kg"]
+  end
+
+  def ui
   end
 end
