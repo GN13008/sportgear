@@ -8,7 +8,11 @@ class KitesController < ApplicationController
     @size_range_12_19 = 12
     @size_range_19_25 = 9
     if params[:sport_lvl].present?
-      @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? It's why we have select some gear that could suit you 🔥"
+      if params[:sport_lvl] == "Beginner"
+        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? This selection is fully dedicated to your lvl ! Enjoy 🔥"
+      else
+        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? It's why we have select some gear that could suit you and that you could keep for a longue time 🔥"
+      end
       accessibility = accessibility_filter(params[:sport_lvl])
       @search_kites = @kites.select do |kite|
         kite if kite.kite_parameters[0].rate > accessibility

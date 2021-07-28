@@ -7,22 +7,22 @@
         <%= form_with url: "/search", method: :get, class: "form-group" do |form| %>
           <div class="row justify-content-center mt-2">
             <div class="col-12 col-md-4">
-              <%= form.label "Sport Level", "Sport Level", class: "form-control" %>
+              <%= form.label "Sport Level", "Sport Level", class: "form-control form" %>
             </div>
             <div class="col-12 col-md-8">
               <%= form.select "sport_lvl", @sport_lvl, 
                 { selected: "", prompt: 'Are you used to other board sports ?' }, 
-                class: "form-control" %>
+                class: "form-control form" %>
             </div>
           </div>
           <div class="row justify-content-center mt-2">
             <div class="col-12 col-md-4">
-              <%= form.label "Weight", "Weight", class: "form-control" %>
+              <%= form.label "Weight", "Weight", class: "form-control form" %>
             </div>
             <div class="col-12 col-md-8">
               <%= form.select "weights", @weights, 
                 { selected: "", prompt: 'Enter your weights' }, 
-                class: "form-control" %>
+                class: "form-control form" %>
             </div>
           </div>
           <div class="row justify-content-center mt-2">
