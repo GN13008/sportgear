@@ -3,27 +3,58 @@
     <div class="content">
       <h1 class="text-center">Welcome in the Kite world !</h1>
       <p class="text-center mt-4">⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <a href="#">Some school near from you</a> ⚠️</p>
-      <hr>
-      <p class="text-justify">As a Kite Beginner<%= @usr_weight %>, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
-      <p class="text-justify">For this you will need a quiver (gear pack) of 2 kites : a <b>12 meter</b> (12-18 knts) and a <b>9 meter</b> (18-25 knts).<br>You will also need a TT of this <b>size</b>.</p>
-      <p class="text-justify"><%= @usr_lvl %></p>
-      <hr>
     </div>
    </div>
 </div>
 <div class="content">
+  <h2 class="text-center mt-4">Size and Tips</h2>
+  <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots.</p>
+  <p class="text-justify">For this, you should use a quiver (gear pack) of 2 kites :</p>
+  <p class="advertising"><em><%= @usr_weight %></em></p> 
+  <div class="cards mt-4 mb-4">
+    <div class="card-quiver">
+      <div class="card-quiver-infos">
+        <div>
+          <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
+          <p>You should definitively start with this size and range of wind.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-quiver">
+      <div class="card-quiver-infos">
+        <div>
+          <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
+          <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-quiver">
+      <div class="card-quiver-infos">
+        <div>
+          <h2>About the Twintip</h2>
+          <p>Some information about the good twintip to start</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="content">
   <h2 class="text-center mt-4">Some kites that you will love</h2>
+  <p class="text-justify"><%= @usr_lvl %></p>
+  <p>Select a kite and get access to more informations : dealer, ambassador, brand, ... enjoy !</p>
   <div class="cards mt-4">
     <% @kites.each do |kite| %>
-      <div class="card-trip">
+      <div class="card-gear">
         <img src="<%= kite.photo_url %>" />
-        <div class="card-trip-infos">
+        <div class="card-gear-infos">
           <div>
             <h2><%= kite.brand.name %> | <%= kite.model %></h2>
             <p><%= kite.description %></p>
           </div>
-          <%# <h2 class="card-trip-pricing">£99.99</h2> %>
-          <img class="card-trip-user" src="<%= kite.brand.logo_url %>" />
+          <%# <h2 class="card-gear-pricing">£99.99</h2> %>
+          <img class="card-gear-user" src="<%= kite.brand.logo_url %>" />
         </div>
       </div>
     <% end %>

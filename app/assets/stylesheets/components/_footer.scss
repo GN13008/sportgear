@@ -1,8 +1,11 @@
 .footer {
   background: #F4F4F4;
+}
+
+.footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100px;
   color: rgba(0,0,0,0.4);
 
@@ -18,6 +21,9 @@
 .footer-links {
   display: flex;
   align-items: center;
+  i {
+    font-size: 32px;
+  }
 }
 .footer-links a {
   color: black;
