@@ -3,3 +3,9 @@ fr:
   slogan: "Tu est nouveau dans le monde du kite ? Trouves le matos adapté à ton niveau 🚀"
   devise-comment:
     function_not_available: "La fonction n'est pas dispo pour le moment"
+  form:
+    call: "Trouves ton matos"
+    weights: "Poids"
+    weights_question: "Quel est ton poids ?"
+    lvl: "Ton niveau"
+    lvl_question: "Pratiques tu d'autres sport nautique / de glisse ?"
