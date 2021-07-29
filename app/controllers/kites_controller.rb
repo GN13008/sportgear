@@ -1,5 +1,5 @@
 class KitesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :search ]
+  skip_before_action :authenticate_user!, only: [ :search, :show ]
 
   def search
     @usr_lvl = "You did not say your lvl in other watersports / boardsports ! Here are all the kite we could recommend to a Beginner 🔥"
@@ -26,6 +26,10 @@ class KitesController < ApplicationController
       @usr_weight = "As a rider of #{params[:weights]}, you will need a #{@size_range_12_19} and a #{@size_range_19_25} !"
     end
 
+  end
+
+  def show
+    @kite = Kite.find(params[:id])
   end
 
   private

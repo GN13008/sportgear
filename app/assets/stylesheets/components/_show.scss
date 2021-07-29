@@ -1,0 +1,70 @@
+.white-body {
+  background: white;
+}
+.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.show-logo {
+  position: absolute;
+  right: 16px;
+  top: 40px;
+  width: 40px;
+}
+
+.gear {
+  padding-top: 32px;
+  padding-right: 16px;
+}
+
+.gear-charact {
+  position:relative;
+}
+.card-gear {
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 100%;
+}
+
+.show > .gear > img {
+  height: 250px;
+  width: 100%;
+  object-fit:scale-down;
+}
+
+.card-gear h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: $dark-blue;
+}
+
+.card-gear p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  color: $dark-blue;
+}
+
+.card-gear .card-gear-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  p {
+    padding-top: 16px;
+  }
+}
+
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
