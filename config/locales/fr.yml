@@ -1,3 +1,5 @@
 fr:
   welcome: "Bienvenue sur SportGear"
   slogan: "Tu est nouveau dans le monde du kite ? Trouves le matos adapté à ton niveau 🚀"
+  devise-comment:
+    function_not_available: "La fonction n'est pas dispo pour le moment"
