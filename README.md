@@ -8,6 +8,7 @@ So this is the MVP of this idea. Working on Kite gear first. I wil also work on 
 ## Goals and achievement :
  - Practice my skills in Ruby on rails, Data Base and Design
  - OG graphe and meta of an app (In progress)
+ - Learn working on i18n RoR - Internationalization (In progress)
 
 ## Ways of evolutions :
  - ...

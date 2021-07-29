@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  welcome: "Welcome to Sport Gear"
+  slogan: "You are New in the Kite World ? Find sport gear adapt to your level 🚀"
+  devise-comment:
+    function_not_available: "We are working of a new version of SportGear where login could be usefull but for the moment the function is not available and is present only to test function"
+  form:
+    call: "Find The best Gear"
+    weights: "Weights"
+    weights_question: "Enter your weights"
+    lvl: "Your Lvl"
+    lvl_question: "Are you used to other board sports ?"

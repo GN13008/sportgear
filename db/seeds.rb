@@ -32,6 +32,7 @@ kites = [moto, switchblade, bandit, banditS, rs, evo, rebel]
 puts "Adding params accessibility"
 kites.each do |kite|
     KiteParameter.create(name: "accessibility", kite_id: kite.id, rate: 3)
+    KiteParameter.create(name: "Freeride", kite_id: kite.id, rate: 7)
 end
 
 moto.kite_parameters[0].rate = 8;
@@ -42,3 +43,5 @@ bandit.kite_parameters[0].rate = 8;
 bandit.kite_parameters[0].save
 rs.kite_parameters[0].rate = 6;
 rs.kite_parameters[0].save
+switchblade.kite_parameters[0].rate = 6;
+switchblade.kite_parameters[0].save
