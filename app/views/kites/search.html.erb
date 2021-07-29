@@ -46,17 +46,19 @@
   <p>Select a kite and get access to more informations : dealer, ambassador, brand, ... enjoy !</p>
   <div class="cards mt-4">
     <% @kites.each do |kite| %>
-      <div class="card-gear">
-        <img src="<%= kite.photo_url %>" />
-        <div class="card-gear-infos">
-          <div>
-            <h2><%= kite.brand.name %> | <%= kite.model %></h2>
-            <p><%= kite.description %></p>
+      <%= link_to kite_path(kite) do %>
+        <div class="card-gear">
+          <img src="<%= kite.photo_url %>" />
+          <div class="card-gear-infos">
+            <div>
+              <h2><%= kite.brand.name %> | <%= kite.model %></h2>
+              <p><%= kite.description %></p>
+            </div>
+            <%# <h2 class="card-gear-pricing">£99.99</h2> %>
+            <img class="card-gear-user" src="<%= kite.brand.logo_url %>" />
           </div>
-          <%# <h2 class="card-gear-pricing">£99.99</h2> %>
-          <img class="card-gear-user" src="<%= kite.brand.logo_url %>" />
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

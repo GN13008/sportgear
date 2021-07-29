@@ -1,0 +1,39 @@
+<div class="white-body">
+  <div class="content">
+    <h1>All about the <%= @kite.brand.name %> | <%= @kite.model %></h1>
+    <h2>Characteristiques</h2>
+    <div class="show">
+      <div class="gear">
+        <p><%= @kite.description %></p>
+        <div class="gear-charact">
+          <img class="show-logo" src="<%= @kite.brand.logo_url %>" />
+          <ul>
+            <% @kite.kite_parameters.each do |parameter| %>
+              <li><%= parameter.name %> : <%= parameter.rate %> / 10</li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="<%= @kite.photo_url %>" />
+      </div>
+    </div>
+    <h2>Dealer</h2>
+    <ul>
+      <li>Shop 1</li>
+      <li>Shop 2</li>
+    </ul>
+    <h2>Ambassador</h2>
+    <ul>
+      <li>Micka</li>
+      <li>Mike</li>
+    </ul>
+    <h2>School using this gear</h2>
+    <ul>
+      <li>School 1</li>
+      <li>School 2</li>
+    </ul>
+    <br>
+    <br>
+  </div>
+</div>
