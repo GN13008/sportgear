@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get "/search", to: "kites#search", as: :search
     get "/ui", to: "pages#ui"
     resources :kites, only: [:show]
+    resources :sports, only: [:show]
     # [...]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

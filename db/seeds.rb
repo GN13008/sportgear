@@ -2,8 +2,14 @@ puts "----- Cleaning Database -----"
 KiteParameter.destroy_all
 Kite.destroy_all
 Brand.destroy_all
+Sport.destroy_all
 
 puts "----- Seeding in process -----"
+puts "Create Wing and Kite"
+kite = Sport.create(name: "Kitesurf", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627889955/SportGear/Sports/action_fone_bandit21_3_ewtdw3.jpg")
+kitefoil = Sport.create(name: "Kitefoil", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627889955/SportGear/Sports/Header_Foilboards_ysmowm.jpg")
+wing = Sport.create(name: "Wingfoil", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627889955/SportGear/Sports/Wing_ykq4xn.png")
+
 
 puts "Creating some brand"
 cabrinha = Brand.create(name: "Cabrinha", logo_url: "https://cdn.shopify.com/s/files/1/2016/2457/files/favicon_ca5fd4c0-8f8a-4ae9-9d22-28cfa5216cd9_small.png?v=1565227567")
