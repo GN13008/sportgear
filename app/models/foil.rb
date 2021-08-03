@@ -1,0 +1,2 @@
+class Foil < ApplicationRecord
+end
