@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_20_092843) do
+ActiveRecord::Schema.define(version: 2021_08_03_070656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2021_07_20_092843) do
     t.string "logo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "foils", force: :cascade do |t|
+    t.string "model"
+    t.string "photo_url"
+    t.string "description"
+    t.bigint "brand_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_foils_on_brand_id"
   end
 
   create_table "kite_parameters", force: :cascade do |t|
@@ -41,6 +51,13 @@ ActiveRecord::Schema.define(version: 2021_07_20_092843) do
     t.index ["brand_id"], name: "index_kites_on_brand_id"
   end
 
+  create_table "sports", force: :cascade do |t|
+    t.string "name"
+    t.string "cover_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,6 +70,7 @@ ActiveRecord::Schema.define(version: 2021_07_20_092843) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "foils", "brands"
   add_foreign_key "kite_parameters", "kites"
   add_foreign_key "kites", "brands"
 end
