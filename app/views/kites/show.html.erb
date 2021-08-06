@@ -18,22 +18,23 @@
         <img src="<%= @kite.photo_url %>" />
       </div>
     </div>
-    <h2>Dealer</h2>
+    <h2>Test this Gear</h2>
     <ul>
-      <li>Shop 1</li>
-      <li>Shop 2</li>
+      <li>This is a list of School to rent and test this gear</li>
+      <li>This is a list of Event</li>
+      <li>This is a list of Ambassador</li>
     </ul>
-    <h2>Ambassador</h2>
+    <hr>
+    <h2>Buy this Gear</h2>
     <ul>
-      <li>Micka</li>
-      <li>Mike</li>
+      <li>This is a list of shop</li>
     </ul>
-    <h2>School using this gear</h2>
-    <ul>
-      <li>School 1</li>
-      <li>School 2</li>
-    </ul>
+    <hr>
+    <h2>Dealer, Ambassador, School :</h2>
     <br>
+    <div id="map" style="width: 100%; height: 600px; border-radius: 8px;" data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
     <br>
   </div>
 </div>

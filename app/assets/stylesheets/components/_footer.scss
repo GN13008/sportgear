@@ -8,7 +8,6 @@
   justify-content: space-between;
   height: 100px;
   color: rgba(0,0,0,0.4);
-
   a {
     text-decoration: none;
     color: black;
@@ -40,4 +39,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+// Smallest device
+@media (max-width: 768px) {
+  .footer {
+    padding-top : 8px;
+    padding-bottom : 8px;
+  }
+  .footer-content{
+    height: 120px;
+  }
+  .footer-links {
+    flex-direction: column;
+    margin: 0 16px;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
 }

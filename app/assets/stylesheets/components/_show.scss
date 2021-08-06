@@ -28,8 +28,7 @@
   height: 100%;
 }
 
-.show > .gear > img {
-  height: 250px;
+.show > .photo > img {
   width: 100%;
   object-fit:scale-down;
 }
@@ -63,8 +62,8 @@
 
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 768px) {
-  .cards {
+@media (max-width: 768px) {
+  .show {
     grid-template-columns: 1fr;
   }
 }

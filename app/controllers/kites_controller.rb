@@ -30,6 +30,13 @@ class KitesController < ApplicationController
 
   def show
     @kite = Kite.find(params[:id])
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    # @markers = @flats.geocoded.map do |flat|
+    #   {
+    #     lat: flat.latitude,
+    #     lng: flat.longitude
+    #   }
+    @markers = [{ lat: 43.252799, lng: 5.374653 }, { lat: 43.252799, lng: 5.374653 }]
   end
 
   private
