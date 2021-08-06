@@ -35,19 +35,25 @@ rebel = Kite.create(model: "Rebel", photo_url: "https://res.cloudinary.com/dqc8d
 
 kites = [moto, switchblade, bandit, banditS, rs, evo, rebel]
 
-puts "Adding params accessibility"
+puts "Adding params"
 kites.each do |kite|
-    KiteParameter.create(name: "accessibility", kite_id: kite.id, rate: 3)
+    KiteParameter.create(name: "accessibility", kite_id: kite.id, rate: 4)
     KiteParameter.create(name: "Freeride", kite_id: kite.id, rate: 7)
+    KiteParameter.create(name: "Evolution", kite_id: kite.id, rate: 8)
+    KiteParameter.create(name: "Freestyle", kite_id: kite.id, rate: 6)
 end
 
-moto.kite_parameters[0].rate = 8;
-moto.kite_parameters[0].save
-evo.kite_parameters[0].rate = 8;
-evo.kite_parameters[0].save
-bandit.kite_parameters[0].rate = 8;
-bandit.kite_parameters[0].save
-rs.kite_parameters[0].rate = 6;
-rs.kite_parameters[0].save
-switchblade.kite_parameters[0].rate = 6;
-switchblade.kite_parameters[0].save
+# change accessibility
+    # easy to use :
+    moto.kite_parameters[0].rate = 8;
+    moto.kite_parameters[0].save
+    evo.kite_parameters[0].rate = 8;
+    evo.kite_parameters[0].save
+    bandit.kite_parameters[0].rate = 8;
+    bandit.kite_parameters[0].save
+
+    # for regular guys
+    rs.kite_parameters[0].rate = 6;
+    rs.kite_parameters[0].save
+    switchblade.kite_parameters[0].rate = 6;
+    switchblade.kite_parameters[0].save
