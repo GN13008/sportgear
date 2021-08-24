@@ -2,35 +2,39 @@
   <div class="banner-content">
     <div class="content">
       <h1>Find the best <%= @sport.name %> gear</h1>
-      <div class="form-group mt-4">
-        <%= form_with url: @path, method: :get, class: "form-group" do |form| %>
-          <div class="row justify-content-center mt-2">
-            <div class="col-12 col-md-7">
-              <%= form.label "Sport Level", t("form.lvl_question"), class: "form-control form" %>
+      <% if @sport.name == "Kitesurf" %>
+        <div class="form-group mt-4">
+          <%= form_with url: @path, method: :get, class: "form-group" do |form| %>
+            <div class="row justify-content-center mt-2">
+              <div class="col-12 col-md-7">
+                <%= form.label "Sport Level", t("form.lvl_question"), class: "form-control form" %>
+              </div>
+              <div class="col-12 col-md-5">
+                <%= form.select "sport_lvl", @sport_lvl, 
+                  { selected: "", prompt: t("form.lvl") }, 
+                  class: "form-control form" %>
+              </div>
             </div>
-            <div class="col-12 col-md-5">
-              <%= form.select "sport_lvl", @sport_lvl, 
-                { selected: "", prompt: t("form.lvl") }, 
-                class: "form-control form" %>
+            <div class="row justify-content-center mt-2">
+              <div class="col-12 col-md-7">
+                <%= form.label "Weight", t("form.weights_question"), class: "form-control form" %>
+              </div>
+              <div class="col-12 col-md-5">
+                <%= form.select "weights", @weights, 
+                  { selected: "", prompt: t("form.weights") }, 
+                  class: "form-control form" %>
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-center mt-2">
-            <div class="col-12 col-md-7">
-              <%= form.label "Weight", t("form.weights_question"), class: "form-control form" %>
+            <div class="row justify-content-center mt-2">
+              <div class="col-12">
+                <h3><%= form.submit t("form.call"), class: "btn btn-flat form-cntrol w-100" %></h3>
+              </div>
             </div>
-            <div class="col-12 col-md-5">
-              <%= form.select "weights", @weights, 
-                { selected: "", prompt: t("form.weights") }, 
-                class: "form-control form" %>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-2">
-            <div class="col-12">
-              <h3><%= form.submit t("form.call"), class: "btn btn-flat form-cntrol w-100" %></h3>
-            </div>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+      <% else %>
+        <h3 class="mt-4">We are working on this part of the app, subiscribe to the newsletter and see you soon !</h3>
+      <% end %>
     </div>
   </div>
 </div>

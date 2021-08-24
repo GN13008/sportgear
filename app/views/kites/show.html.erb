@@ -1,6 +1,6 @@
 <div class="white-body">
   <div class="content">
-    <h1>All about the <%= @kite.brand.name %> | <%= @kite.model %></h1>
+    <h1>All about the <%= @kite.brand.name %> <%= @kite.model %></h1>
     <h2>Characteristiques</h2>
     <div class="show">
       <div class="gear">
@@ -18,6 +18,13 @@
         <img src="<%= @kite.photo_url %>" />
       </div>
     </div>
+    <br>
+    <h2>Dealer, Ambassador, School :</h2>
+    <br>
+    <div id="map" style="width: 100%; height: 600px; border-radius: 8px;" data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <hr>
     <h2>Test this Gear</h2>
     <ul>
       <li>This is a list of School to rent and test this gear</li>
@@ -29,12 +36,6 @@
     <ul>
       <li>This is a list of shop</li>
     </ul>
-    <hr>
-    <h2>Dealer, Ambassador, School :</h2>
-    <br>
-    <div id="map" style="width: 100%; height: 600px; border-radius: 8px;" data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
     <br>
   </div>
 </div>
