@@ -1,10 +1,12 @@
 <div class="white-body">
   <div class="content">
     <h1>All about the <%= @kite.brand.name %> <%= @kite.model %></h1>
-    <h2>Characteristiques</h2>
+    <br>
+    <h2>Characteristics</h2>
     <div class="show">
       <div class="gear">
-        <p><%= @kite.description %></p>
+        <p class="text-justify"><%= @kite.description %></p>
+        <br>
         <div class="gear-charact">
           <img class="show-logo" src="<%= @kite.brand.logo_url %>" />
           <ul>
