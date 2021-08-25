@@ -2,26 +2,19 @@
   <div class="banner-content">
     <div class="content">
       <h1>Find the best <%= @sport.name %> gear</h1>
+      <h3>Tell us more about you and find the best gear !</h3>
       <% if @sport.name == "Kitesurf" %>
         <div class="form-group mt-4">
           <%= form_with url: @path, method: :get, class: "form-group" do |form| %>
             <div class="row justify-content-center mt-2">
-              <div class="col-12 col-md-7">
-                <%= form.label "Sport Level", t("form.lvl_question"), class: "form-control form" %>
-              </div>
-              <div class="col-12 col-md-5">
+              <div class="col-12 col-md-6">
                 <%= form.select "sport_lvl", @sport_lvl, 
-                  { selected: "", prompt: t("form.lvl") }, 
+                  { selected: "", prompt: t("form.lvl_question") }, 
                   class: "form-control form" %>
-              </div>
-            </div>
-            <div class="row justify-content-center mt-2">
-              <div class="col-12 col-md-7">
-                <%= form.label "Weight", t("form.weights_question"), class: "form-control form" %>
-              </div>
-              <div class="col-12 col-md-5">
+              </div>       
+              <div class="col-12 col-md-6">
                 <%= form.select "weights", @weights, 
-                  { selected: "", prompt: t("form.weights") }, 
+                  { selected: "", prompt: t("form.weights_question") }, 
                   class: "form-control form" %>
               </div>
             </div>
