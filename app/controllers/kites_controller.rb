@@ -36,7 +36,7 @@ class KitesController < ApplicationController
     #     lat: flat.latitude,
     #     lng: flat.longitude
     #   }
-    @markers = [{ lat: 43.252799, lng: 5.374653 }, { lat: 43.252799, lng: 5.374653 }]
+    @markers = [{ lat: 43.252799, lng: 5.374653,  info_window: render_to_string(partial: "info_window", locals: { kite: @kite }) }]
   end
 
   private
