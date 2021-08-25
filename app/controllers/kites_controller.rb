@@ -11,7 +11,7 @@ class KitesController < ApplicationController
       if params[:sport_lvl] == "Beginner"
         @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? This selection is fully dedicated to your lvl ! Enjoy 🔥"
       else
-        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? It's why we have select some gear that could suit you and that you could keep for a longue time 🔥"
+        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? It's why we have select some gear that could suit you and that you could keep for a long time 🔥"
       end
       accessibility = accessibility_filter(params[:sport_lvl])
       @search_kites = @kites.select do |kite|
