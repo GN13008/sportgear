@@ -57,3 +57,9 @@ end
     rs.kite_parameters[0].save
     switchblade.kite_parameters[0].rate = 6;
     switchblade.kite_parameters[0].save
+
+
+puts "create 2 schools"
+
+School.create(name: "Moana", address: "2 avenue de Montredon, 13008 Marseille")
+School.create(name: "Fil d'air", address: "15 rue de la Méditerranée, mèze")

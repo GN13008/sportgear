@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "/ui", to: "pages#ui"
     resources :kites, only: [:show]
     resources :sports, only: [:show]
+    resources :schools, only: [:index]
     # [...]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
