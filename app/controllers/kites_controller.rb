@@ -15,7 +15,7 @@ class KitesController < ApplicationController
       end
       accessibility = accessibility_filter(params[:sport_lvl])
       @search_kites = @kites.select do |kite|
-        kite if kite.kite_parameters[0].rate > accessibility
+        kite if kite.kite_parameters.where(name: "accessibility").first.rate > accessibility
       end
       @kites = @search_kites
     end
@@ -23,7 +23,7 @@ class KitesController < ApplicationController
       size_factor = size_finder(params[:weights], params[:sport_lvl])
       @size_range_12_19 = 12 + size_factor
       @size_range_19_25 = 9 + size_factor
-      @usr_weight = "As a rider of #{params[:weights]}, you will need a #{@size_range_12_19} and a #{@size_range_19_25} !"
+      @usr_weight = "As a #{params[:sport_lvl]} rider of #{params[:weights]}, you will need a #{@size_range_12_19} and a #{@size_range_19_25} !"
     end
 
   end
