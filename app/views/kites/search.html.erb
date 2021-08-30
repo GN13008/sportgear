@@ -9,50 +9,67 @@
 <div class="content">
   <h2 class="text-center mt-4">Size and Tips</h2>
   <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots. For this, you should use a quiver (gear pack) of 2 kites :</p>
-  <div class="size_card">
-    <div class="liste Size">
-      <p>Size :</p>
-      <p>13 m²</p>
-      <p>11 m²</p>
-      <p>09 m²</p>
-      <p class = "mb-2">07 m²</p>
+  <div class="size_cards">
+    <div class="size_card">
+      <div class="liste Size">
+        <p>Size :</p>
+        <p>13 m²</p>
+        <p>11 m²</p>
+        <p>09 m²</p>
+        <p class = "mb-2">07 m²</p>
+      </div>
+      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630311515/SportGear/Logo/Sizing_ntx5nz.png" />
+      <div class="liste WindRange">
+        <p>Wind Range :</p>
+        <p>11-15 knots</p>
+        <p>16-20 knots</p>
+        <p>20-26 knots</p>
+        <p class = "mb-2">27-35 knots</p>
+      </div>
     </div>
-    <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630311515/SportGear/Logo/Sizing_ntx5nz.png" />
-    <div class="liste WindRange">
-      <p>Wind Range :</p>
-      <p>11-15 knots</p>
-      <p>16-20 knots</p>
-      <p>20-26 knots</p>
-      <p class = "mb-2">27-35 knots</p>
+    <div class="twin_card">
+    <p>You should take a twin with this dimension : </p>
+    <p>138x41</p>
+      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630325038/SportGear/Icones/Twintip_mge4o4.png" />
     </div>
   </div>
-  <div class="cards mt-4 mb-4">
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
-          <p>You should definitively start with this size and range of wind.</p>
+  <br>
+  <p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      More details :
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="cards mt-4 mb-4">
+        <div class="card-quiver">
+          <div class="card-quiver-infos">
+            <div>
+              <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
+              <p>You should definitively start with this size and range of wind.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-quiver">
+          <div class="card-quiver-infos">
+            <div>
+              <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
+              <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-quiver">
+          <div class="card-quiver-infos">
+            <div>
+              <h2>About the Twintip</h2>
+              <p>Some information about the good twintip to start</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
-          <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
-        </div>
-      </div>
-    </div>
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2>About the Twintip</h2>
-          <p>Some information about the good twintip to start</p>
-        </div>
-      </div>
+      <p class="advertising"><em><%= @usr_weight %></em></p> 
     </div>
   </div>
-  <p class="advertising"><em><%= @usr_weight %></em></p> 
   <hr>
 </div>
 </div>
