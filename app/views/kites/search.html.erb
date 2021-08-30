@@ -13,10 +13,10 @@
     <div class="size_card">
       <div class="liste Size">
         <p>Size :</p>
-        <p>13 m²</p>
-        <p>11 m²</p>
-        <p>09 m²</p>
-        <p class = "mb-2">07 m²</p>
+        <p><%= @size_range_11_15 %> m²</p>
+        <p><%= @size_range_16_20 %> m²</p>
+        <p><%= @size_range_20_26 %> m²</p>
+        <p class = "mb-2"><%= @size_range_27_35 %> m²</p>
       </div>
       <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630311515/SportGear/Logo/Sizing_ntx5nz.png" />
       <div class="liste WindRange">
@@ -34,40 +34,48 @@
     </div>
   </div>
   <br>
-  <p>
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      More details :
-    </a>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      <div class="cards mt-4 mb-4">
-        <div class="card-quiver">
-          <div class="card-quiver-infos">
-            <div>
-              <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
-              <p>You should definitively start with this size and range of wind.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card-quiver">
-          <div class="card-quiver-infos">
-            <div>
-              <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
-              <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card-quiver">
-          <div class="card-quiver-infos">
-            <div>
-              <h2>About the Twintip</h2>
-              <p>Some information about the good twintip to start</p>
-            </div>
-          </div>
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            More details :
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+              <div class="">
+                <div class="cards mt-4 mb-4">
+                  <div class="card-quiver">
+                    <div class="card-quiver-infos">
+                      <div>
+                        <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
+                        <p>You should definitively start with this size and range of wind.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-quiver">
+                    <div class="card-quiver-infos">
+                      <div>
+                        <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
+                        <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-quiver">
+                    <div class="card-quiver-infos">
+                      <div>
+                        <h2>About the Twintip</h2>
+                        <p>Some information about the good twintip to start</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="advertising"><em><%= @usr_weight %></em></p> 
+              </div>
         </div>
       </div>
-      <p class="advertising"><em><%= @usr_weight %></em></p> 
     </div>
   </div>
   <hr>
