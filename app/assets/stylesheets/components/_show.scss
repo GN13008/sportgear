@@ -1,13 +1,13 @@
 .white-body {
   background: white;
 }
-.show {
+.show-gear {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
 
-.show-logo {
+show-gear-logo {
   position: absolute;
   right: 10px;
   top: 0px;
@@ -28,7 +28,7 @@
   height: 100%;
 }
 
-.show > .photo > img {
+.show-gear > .photo > img {
   width: 100%;
   object-fit:scale-down;
 }
@@ -63,7 +63,7 @@
 
 // Smallest device
 @media (max-width: 768px) {
-  .show {
+  .show-gear {
     grid-template-columns: 1fr;
   }
 }
