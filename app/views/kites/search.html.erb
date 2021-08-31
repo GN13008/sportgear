@@ -2,43 +2,67 @@
   <div class="banner-content">
     <div class="content">
       <h1 class="text-center">Welcome in the Kite world !</h1>
-      <p class="text-center mt-4">⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <%= link_to "Some school near from you", schools_path %> ⚠️</p>
     </div>
    </div>
 </div>
+<%# Size and Tips %>
 <div class="content">
   <h2 class="text-center mt-4">Size and Tips</h2>
-  <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots. For this, you should use a quiver (gear pack) of 2 kites :</p>
-  <div class="cards mt-4 mb-4">
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
-          <p>You should definitively start with this size and range of wind.</p>
-        </div>
+  <p class="advertising"><em><%= @usr_weight %></em></p> 
+  <div class="size_cards">
+    <div class="size_range_schema">
+      <div class="liste_size">
+        <p><%= @size_range_11_15 %> m²</p>
+        <p><%= @size_range_16_20 %> m²</p>
+        <p><%= @size_range_20_26 %> m²</p>
+        <p class = "mb-2"><%= @size_range_27_35 %> m²</p>
+      </div>
+      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630311515/SportGear/Logo/Sizing_ntx5nz.png" />
+      <div class="liste_windrange">
+        <p>11-15 knots</p>
+        <p>16-20 knots</p>
+        <p>20-26 knots</p>
+        <p class = "mb-2">27-35 knots</p>
       </div>
     </div>
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
-          <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
-        </div>
-      </div>
+    <div class="twin_card">
+      <p>You should take a twin with approximatively this dimension : </p>
+      <p><%= @twin_size %></p>
+      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630325038/SportGear/Icones/Twintip_mge4o4.png" />
     </div>
-    <div class="card-quiver">
-      <div class="card-quiver-infos">
-        <div>
-          <h2>About the Twintip</h2>
-          <p>Some information about the good twintip to start</p>
+  </div>
+  <br>
+  <div class="more-details">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              More details :
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+                <div class="">
+                  <h3>Disclaimer :</h3>
+                  <p>⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <%= link_to "Some school near from you", schools_path %> ⚠️</p>
+                  <br>
+                  <h3>About the Wind Range :</h3>
+                  <p>You should start kiteboarding in a wind range of 12 to 25 knots.</p>
+                  <p>Under 12 knots it will be hard to fly your kite. Above 25 knots, wind start to be strong and it could be dangerous if you are beginner.</p>
+                  <br>
+                  <h3>About the twintip :</h3>
+                  <p>Dimensions are given to help you choose a twintip. Bigger twintip is easier in lightwind but less playfull and vice versa.</p>
+                </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <p class="advertising"><em><%= @usr_weight %></em></p> 
   <hr>
 </div>
-</div>
+<%# Kite Model %>
 <div class="content">
   <h2 class="text-center mt-4">Some kites that you will love</h2>
   <p class="text-justify"><%= @usr_lvl %></p>

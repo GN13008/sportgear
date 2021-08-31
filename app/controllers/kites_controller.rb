@@ -3,10 +3,13 @@ class KitesController < ApplicationController
 
   def search
     @usr_lvl = "You did not say your lvl in other watersports / boardsports ! Here are all the kite we could recommend to a Beginner 🔥"
-    @usr_weight = "12 and 9 are the standard quiver but you should fill your weights to have more relevant suggestions !"
+    @usr_weight = "You did not say your weights. This following sizes are based on a 75-85 kg Rider. Don't hesitate, fill your weights to have more relevant suggestions !"
     @kites = Kite.all
-    @size_range_12_19 = 12
-    @size_range_19_25 = 9
+    @size_range_11_15 = 13
+    @size_range_16_20 = 11
+    @size_range_20_26 = 9
+    @size_range_27_35 = 7
+    @twin_size = "138 x 41"
     if params[:sport_lvl].present?
       if params[:sport_lvl] == "Beginner"
         @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? This selection is fully dedicated to your lvl ! Enjoy 🔥"
@@ -21,9 +24,12 @@ class KitesController < ApplicationController
     end
     if params[:weights].present?
       size_factor = size_finder(params[:weights], params[:sport_lvl])
-      @size_range_12_19 = 12 + size_factor
-      @size_range_19_25 = 9 + size_factor
-      @usr_weight = "As a #{params[:sport_lvl]} rider of #{params[:weights]}, you will need a #{@size_range_12_19} and a #{@size_range_19_25} !"
+      @size_range_11_15 = 13 + size_factor
+      @size_range_16_20 = 11 + size_factor
+      @size_range_20_26 = 9 + size_factor
+      @size_range_27_35 = 7 + size_factor
+      @usr_weight = "This following size are based on your weights :"
+      @twin_size = twin_finder(params[:weights])
     end
 
   end
@@ -76,5 +82,23 @@ class KitesController < ApplicationController
       size_factor += 2
     end
     return size_factor
+  end
+
+  def twin_finder(weights)
+    case weights
+    when "< 55 kg"
+      size = "130 x 38"
+    when "55-65 kg"
+      size = "130 x 38"
+    when "65-75 kg"
+      size = "134 x 40"
+    when "75-85 kg"
+      size = "138 x 41"
+    when "85-95 kg"
+      size = "142 x 43"
+    when "> 95 kg"
+      size = "151 x 44"
+    end
+    return size
   end
 end
