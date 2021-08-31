@@ -102,3 +102,13 @@
     font-size: 14px;
   }
 }
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .size_range_schema {
+    height: 248px;
+    padding: 24px 0;
+  }
+  .size_range_schema > img {
+    height: 200px;
+  }
+}
