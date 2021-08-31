@@ -32,46 +32,28 @@
     </div>
   </div>
   <br>
-  <div class="accordion" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            More details :
-          </button>
-        </h2>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-              <div class="">
-                <div class="cards mt-4 mb-4">
-                  <div class="card-quiver">
-                    <div class="card-quiver-infos">
-                      <div>
-                        <h2><%= @size_range_12_19 %> meter <i class="fas fa-arrow-alt-circle-right"></i> 12-19 knots</h2>
-                        <p>You should definitively start with this size and range of wind.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-quiver">
-                    <div class="card-quiver-infos">
-                      <div>
-                        <h2><%= @size_range_19_25  %> meter <i class="fas fa-arrow-alt-circle-right"></i> 19-25 knots</h2>
-                        <p>You could kite more often if you add this kite to your collection. Be carrefull in 19-25 knots.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-quiver">
-                    <div class="card-quiver-infos">
-                      <div>
-                        <h2>About the Twintip</h2>
-                        <p>Some information about the good twintip to start</p>
-                      </div>
-                    </div>
-                  </div>
+  <div class="more-details">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              More details :
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+                <div class="">
+                  <h3>About the Wind Range :</h3>
+                  <p>You should start kiteboarding in a wind range of 12 to 25 knots.</p>
+                  <p>Under 12 knots it will be hard to fly your kite. Above 25 knots, wind start to be strong and it could be dangerous if you are beginner.</p>
+                  <br>
+                  <h3>About the twintip :</h3>
+                  <p>Dimensions are given to help you choose a twintip. Bigger twintip is easier in lightwind but less playfull and vice versa.</p>
+                  <p class="advertising"><em><%= @usr_weight %></em></p> 
                 </div>
-                <p class="advertising"><em><%= @usr_weight %></em></p> 
-              </div>
+          </div>
         </div>
       </div>
     </div>

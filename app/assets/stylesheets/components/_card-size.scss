@@ -4,6 +4,19 @@
   grid-gap: 16px;
 }
 
+.size_cards h2 {
+  font-size: 24px;
+  text-align: center;
+  // font-weight: bold;
+  margin: 0;
+}
+
+.size_cards p {
+  font-size: 16px;
+  text-align: center;
+  opacity: .7;
+  margin: 0;
+}
 
 .size_range_schema {
   display: grid;
@@ -60,13 +73,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.size_card .liste {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .twin_card > img {
   height: 200px;
   width: 100%;
@@ -74,18 +80,17 @@
   align-self: center;
 }
 
-.size_cards h2 {
-  font-size: 24px;
-  text-align: center;
-  // font-weight: bold;
-  margin: 0;
-}
-
-.size_cards p {
-  font-size: 16px;
-  text-align: center;
-  opacity: .7;
-  margin: 0;
+.more-details {
+  button {
+    color: $font-dark;
+    opacity: O.7;
+  }
+  button:hover {
+    color: $font-dark;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 1;
+  }
 }
 
 // Smallest device
@@ -93,10 +98,7 @@
   .size_cards {
     grid-template-columns: 1fr;
   }
-  .size_card > img {
-    height: 100%;
-  }
-  .size_card p {
+  .size_cards p {
     font-size: 14px;
   }
 }
