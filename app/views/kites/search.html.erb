@@ -10,17 +10,15 @@
   <h2 class="text-center mt-4">Size and Tips</h2>
   <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots. For this, you should use a quiver (gear pack) of 2 kites :</p>
   <div class="size_cards">
-    <div class="size_card">
-      <div class="liste Size">
-        <p>Size :</p>
+    <div class="size_range_schema">
+      <div class="liste_size">
         <p><%= @size_range_11_15 %> m²</p>
         <p><%= @size_range_16_20 %> m²</p>
         <p><%= @size_range_20_26 %> m²</p>
         <p class = "mb-2"><%= @size_range_27_35 %> m²</p>
       </div>
       <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630311515/SportGear/Logo/Sizing_ntx5nz.png" />
-      <div class="liste WindRange">
-        <p>Wind Range :</p>
+      <div class="liste_windrange">
         <p>11-15 knots</p>
         <p>16-20 knots</p>
         <p>20-26 knots</p>
@@ -28,8 +26,8 @@
       </div>
     </div>
     <div class="twin_card">
-    <p>You should take a twin with this dimension : </p>
-    <p>138x41</p>
+      <p>You should take a twin with approximatively this dimension : </p>
+      <p><%= @twin_size %></p>
       <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630325038/SportGear/Icones/Twintip_mge4o4.png" />
     </div>
   </div>
