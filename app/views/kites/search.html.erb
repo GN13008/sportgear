@@ -2,13 +2,13 @@
   <div class="banner-content">
     <div class="content">
       <h1 class="text-center">Welcome in the Kite world !</h1>
-      <p class="text-center mt-4">⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <%= link_to "Some school near from you", schools_path %> ⚠️</p>
     </div>
    </div>
 </div>
+<%# Size and Tips %>
 <div class="content">
   <h2 class="text-center mt-4">Size and Tips</h2>
-  <p class="text-justify">As a Kite Beginner, you should start kiteboarding in a wind range of 12 to 25 knots. For this, you should use a quiver (gear pack) of 2 kites :</p>
+  <p class="advertising"><em><%= @usr_weight %></em></p> 
   <div class="size_cards">
     <div class="size_range_schema">
       <div class="liste_size">
@@ -45,13 +45,15 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
                 <div class="">
+                  <h3>Disclaimer :</h3>
+                  <p>⚠️ This is an extrem sport you should start with minimum 3 days of course ➡️ <%= link_to "Some school near from you", schools_path %> ⚠️</p>
+                  <br>
                   <h3>About the Wind Range :</h3>
                   <p>You should start kiteboarding in a wind range of 12 to 25 knots.</p>
                   <p>Under 12 knots it will be hard to fly your kite. Above 25 knots, wind start to be strong and it could be dangerous if you are beginner.</p>
                   <br>
                   <h3>About the twintip :</h3>
                   <p>Dimensions are given to help you choose a twintip. Bigger twintip is easier in lightwind but less playfull and vice versa.</p>
-                  <p class="advertising"><em><%= @usr_weight %></em></p> 
                 </div>
           </div>
         </div>
@@ -60,7 +62,7 @@
   </div>
   <hr>
 </div>
-</div>
+<%# Kite Model %>
 <div class="content">
   <h2 class="text-center mt-4">Some kites that you will love</h2>
   <p class="text-justify"><%= @usr_lvl %></p>

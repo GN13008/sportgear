@@ -3,7 +3,7 @@ class KitesController < ApplicationController
 
   def search
     @usr_lvl = "You did not say your lvl in other watersports / boardsports ! Here are all the kite we could recommend to a Beginner 🔥"
-    @usr_weight = "12 and 9 are the standard quiver but you should fill your weights to have more relevant suggestions !"
+    @usr_weight = "You did not say your weights. This following sizes are based on a 75-85 kg Rider. Don't hesitate, fill your weights to have more relevant suggestions !"
     @kites = Kite.all
     @size_range_11_15 = 13
     @size_range_16_20 = 11
@@ -28,7 +28,7 @@ class KitesController < ApplicationController
       @size_range_16_20 = 11 + size_factor
       @size_range_20_26 = 9 + size_factor
       @size_range_27_35 = 7 + size_factor
-      @usr_weight = "As a #{params[:sport_lvl]} rider of #{params[:weights]}, you will need a #{@size_range_12_19} and a #{@size_range_19_25} !"
+      @usr_weight = "This following size are based on your weights :"
       @twin_size = twin_finder(params[:weights])
     end
 
