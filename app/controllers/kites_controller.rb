@@ -12,9 +12,9 @@ class KitesController < ApplicationController
     @twin_size = "138 x 41"
     if params[:sport_lvl].present?
       if params[:sport_lvl] == "Beginner"
-        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? This selection is fully dedicated to your lvl ! Enjoy 🔥"
+        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports. This selection is fully dedicated to your lvl ! Enjoy 🔥"
       else
-        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports ? It's why we have select some gear that could suit you and that you could keep for a long time 🔥"
+        @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports. It's why we have select some gear that could suit you and that you could keep for a long time 🔥"
       end
       accessibility = accessibility_filter(params[:sport_lvl])
       @search_kites = @kites.select do |kite|
@@ -28,7 +28,7 @@ class KitesController < ApplicationController
       @size_range_16_20 = 11 + size_factor
       @size_range_20_26 = 9 + size_factor
       @size_range_27_35 = 7 + size_factor
-      @usr_weight = "This following size are based on your weights :"
+      @usr_weight = "This following sizes are based on your weights (#{params[:weights]}):"
       @twin_size = twin_finder(params[:weights])
     end
 
