@@ -21,7 +21,7 @@ puts "Creating some kite"
 moto = Kite.create(model: "Moto", photo_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627463447/SportGear/KiteModel/moto_vvzx2o.png", 
     description: "Moto is THE crossover kite from Cabrinha. Very nice from beginner to expert that want one kite for all practices.", brand_id: cabrinha.id)
 switchblade = Kite.create(model: "Switchblade", photo_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627463447/SportGear/KiteModel/switchblade_zbnk7s.png", 
-    description: "Switchblade ... Everyone know the switchblade. It is the most famous kite from the Cabrinha range. Very good in Freeride, it will suit you a long time.", brand_id: cabrinha.id)
+    description: "Switchblade ... Everyone knows the switchblade. It is the most famous kite from the Cabrinha range. Very good in Freeride, it will suit you a long time.", brand_id: cabrinha.id)
 bandit = Kite.create(model: "Bandit", photo_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627463447/SportGear/KiteModel/bandit_vwlnxo.png", 
     description: "Since the the beginning, F-one has focused his work on create One kite that works in all conditions. This is the bandit.", brand_id: fone.id)
 banditS = Kite.create(model: "Bandit S", photo_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627463447/SportGear/KiteModel/banditS_xju2gu.png", 
