@@ -20,24 +20,42 @@
         <img src="<%= @kite.photo_url %>" />
       </div>
     </div>
-    <br>
-    <h2>Dealer, Ambassador, School :</h2>
-    <br>
-    <div id="map" style="width: 100%; height: 600px; border-radius: 8px;" data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="more-details">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="fas fa-arrow-circle-down mr-2"></i> More details :
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="">
+                <h2>Dealer, Ambassador, School :</h2>
+                <br>
+                <div id="map" style="width: 100%; height: 600px; border-radius: 8px;" data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+                </div>
+                <hr>
+                <h2>Test this Gear</h2>
+                <ul>
+                  <li>This is a list of School to rent and test this gear</li>
+                  <li>This is a list of Event</li>
+                  <li>This is a list of Ambassador</li>
+                </ul>
+                <hr>
+                <h2>Buy this Gear</h2>
+                <ul>
+                  <li>This is a list of shop</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <hr>
-    <h2>Test this Gear</h2>
-    <ul>
-      <li>This is a list of School to rent and test this gear</li>
-      <li>This is a list of Event</li>
-      <li>This is a list of Ambassador</li>
-    </ul>
-    <hr>
-    <h2>Buy this Gear</h2>
-    <ul>
-      <li>This is a list of shop</li>
-    </ul>
-    <br>
   </div>
+  <br>
 </div>
