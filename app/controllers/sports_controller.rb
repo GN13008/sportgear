@@ -12,11 +12,11 @@ class SportsController < ApplicationController
 
   def path_selector(sport)
     case sport
-    when "Kitesurf"
+    when "Kite"
       kitesurf_search_path
-    when "Kitefoil"
-      kitefoil_search_path
-    when "Wingfoil"
+    # when "Kitefoil"
+    #   kitefoil_search_path
+    when "Wing"
       wingfoil_search_path
     end
   end

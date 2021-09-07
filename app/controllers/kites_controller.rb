@@ -5,6 +5,11 @@ class KitesController < ApplicationController
     @usr_lvl = "You did not say your lvl in other watersports / boardsports ! Here are all the kite we could recommend to a Beginner 🔥"
     @usr_weight = "You did not say your weights. This following sizes are based on a 75-85 kg Rider. Don't hesitate, fill your weights to have more relevant suggestions !"
     @kites = Kite.all
+    if params[:support].present?
+      @support = params[:support]
+    else
+      @support = "Twintip"
+    end
     @size_range_11_15 = 13
     @size_range_16_20 = 11
     @size_range_20_26 = 9
