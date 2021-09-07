@@ -25,11 +25,19 @@
         <p class = "mb-2">27-35 knots</p>
       </div>
     </div>
-    <div class="twin_card">
-      <p>You should take a twin with approximatively this dimension : </p>
-      <p><%= @twin_size %></p>
-      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630500815/SportGear/Icones/Twintip_zdg5rm.png" />
-    </div>
+    <% if @support == "Twintip" %>
+      <div class="twin_card">
+        <p>You should take a twin with approximatively this dimension : </p>
+        <p><%= @twin_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630500815/SportGear/Icones/Twintip_zdg5rm.png" />
+      </div>
+    <% else %>
+      <div class="twin_card">
+        <p>You should take a surf with approximatively this dimension : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631027468/SportGear/Icones/Surf_hxu6da.png" />
+      </div>
+    <% end %>
   </div>
   <br>
   <%# Show more %>

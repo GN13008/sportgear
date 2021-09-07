@@ -15,6 +15,7 @@ class KitesController < ApplicationController
     @size_range_20_26 = 9
     @size_range_27_35 = 7
     @twin_size = "138 x 41"
+    @surf_size = "5’7” - 24L"
     if params[:sport_lvl].present?
       if params[:sport_lvl] == "Beginner"
         @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports. This selection is fully dedicated to your lvl ! Enjoy 🔥"
