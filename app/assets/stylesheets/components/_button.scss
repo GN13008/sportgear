@@ -1,12 +1,14 @@
 .btn-flat {
-  color: white;
+  color: $font-dark;
   padding: 8px 32px;
   border-radius: 8px;
   background: $flash;
   font-size: 18px;
   transition: background 0.3s ease;
+  opacity: 0.8;
 }
 
 .btn-flat:hover {
-  opacity: 0.8;
+  color: white;
+  opacity: 1;
 }
