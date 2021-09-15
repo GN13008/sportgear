@@ -1,6 +1,6 @@
 .size_cards {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
@@ -19,6 +19,8 @@
 }
 
 .size_range_schema {
+  grid-column: 1 / 3;
+  grid-row: 1;
   display: grid;
   width: 100%;
   height: 300px;
@@ -58,22 +60,14 @@
   margin-right: 24px;
 }
 
-.size_card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+
+.support_card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.twin_card {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.twin_card > img {
+.support_card > img {
   height: 200px;
   width: 100%;
   object-fit:scale-down;
@@ -86,7 +80,7 @@
     opacity: O.7;
   }
   button:hover {
-    color: $font-dark;
+    color: $flash;
     font-weight: bold;
     text-decoration: none;
     opacity: 1;
@@ -97,6 +91,9 @@
 @media (min-width: 100px) and (max-width: 768px) {
   .size_cards {
     grid-template-columns: 1fr;
+  }
+  .size_range_schema {
+    grid-column: 1;
   }
   .size_cards p {
     font-size: 14px;
