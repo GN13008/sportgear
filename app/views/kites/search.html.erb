@@ -25,11 +25,41 @@
         <p class = "mb-2">27-35 knots</p>
       </div>
     </div>
-    <div class="twin_card">
-      <p>You should take a twin with approximatively this dimension : </p>
-      <p><%= @twin_size %></p>
-      <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630500815/SportGear/Icones/Twintip_zdg5rm.png" />
-    </div>
+    <%# Supports Card %>
+    <% if @support == "Surf" %>
+      <div class="support_card">
+        <p>You should take a surf with approximatively this dimension : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631027468/SportGear/Icones/Surf_hxu6da.png" />
+      </div>
+    <% elsif @support == "Foil" %>
+      <div class="support_card">
+        <p>For foiling you need a board with enaught volume to keep you out of the water. this dimension : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631649571/SportGear/Icones/Foil_wzvoxw.png" />
+      </div>
+      <div class="support_card">
+        <p>a foil is compose of a mast and a plane : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631649571/SportGear/Icones/Foil_wzvoxw.png" />
+      </div>
+      <div class="support_card">
+        <p>about the mast : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631649571/SportGear/Icones/Foil_wzvoxw.png" />
+      </div>
+      <div class="support_card">
+        <p>about the plane : </p>
+        <p><%= @surf_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631649571/SportGear/Icones/Foil_wzvoxw.png" />
+      </div>
+    <% else %>
+      <div class="support_card">
+        <p>You should take a twin with approximatively this dimension : </p>
+        <p><%= @twin_size %></p>
+        <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630500815/SportGear/Icones/Twintip_zdg5rm.png" />
+      </div>
+    <% end %>
   </div>
   <br>
   <%# Show more %>

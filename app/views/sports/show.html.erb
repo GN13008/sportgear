@@ -2,7 +2,7 @@
   <div class="banner-content">
     <div class="content">
       <h1>Find the best <%= @sport.name %> gear</h1>
-      <% if @sport.name == "Kitesurf" %>
+      <% if @sport.name == "Kite" %>
         <h3>Tell us more about you and find the best gear !</h3>
         <div class="form-group mt-4">
           <%= form_with url: @path, method: :get, class: "form-group" do |form| %>
@@ -20,13 +20,30 @@
             </div>
             <div class="row justify-content-center mt-2">
               <div class="col-12">
+                <div class="support_selection">
+                  <%= form.radio_button :support, "Twintip", class:"support" %>
+                  <%= form.label :support_twintip, "Twintip", style:"background-image: url(https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631025865/SportGear/Sports/01XCalCarbon2_1500x_j0nzjv.png);" %>
+                  <%= form.radio_button :support, "Surf", class:"support" %>
+                  <%= form.label :support_surf, "Surf", style:"background-image: url(https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631025567/SportGear/Sports/SquadSlider2_1500x_qqpic9.png);" %>
+                  <%= form.radio_button :support, "Foil", class:"support" %>
+                  <%= form.label :support_foil, "Foil", style:"background-image: url(https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631025869/SportGear/Sports/SpecialAgent4_1500x_kzuvt6.png);" %>
+                </div>
+              </div>
+              <%# <input type="radio" name="demo2" class="demo2 demoyes" id="demo2-a" checked>
+              <label for="demo2-a">Oui</label>
+
+              <input type="radio" name="demo2" class="demo2 demono" id="demo2-b" >
+              <label for="demo2-b">Non</label> %>
+            </div>
+            <div class="row justify-content-center mt-2">
+              <div class="col-12">
                 <h3><%= form.submit t("form.call"), class: "btn btn-flat form-cntrol w-100" %></h3>
               </div>
             </div>
           <% end %>
         </div>
       <% else %>
-        <h2 class="mt-4">We are working on this part of the app, subscribe to the newsletter to have some news about it very soon !</h2>
+        <h2 class="mt-4">We are working on this part of the app, some news about it very soon !</h2>
       <% end %>
     </div>
   </div>

@@ -1,4 +1,51 @@
 .form {
-  border-radius: 8px;
-  color:black;
+  border-radius: 4px;
+  color: $font-dark;
+}
+
+.support_selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+input[type="radio"].support {
+  display: none;
+}
+input[type="radio"].support + label {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $font-dark;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: opacity(0.8);
+}
+
+input[type="radio"].support:hover + label {
+  color:white;
+  filter: none;
+  border: 4px solid $flash;
+  cursor: pointer;
+}
+
+input[type="radio"].support:checked + label {
+  color:white;
+  filter: none;
+  border: 4px solid $flash;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .support_selection {
+    grid-template-columns: 1fr;
+  }
+  input[type="radio"].support + label {
+    height: 120px;
+  }
 }
