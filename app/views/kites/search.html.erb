@@ -5,10 +5,10 @@
     </div>
    </div>
 </div>
-<%# Size and Tips %>
 <div class="content">
-  <h2 class="text-center mt-4">Size and Tips</h2>
-  <p class="advertising"><em><%= @usr_weight %></em></p> 
+  <h2 class="text-center mt-4">Sizes and Tips</h2>
+  <p class="advertising"><em><%= @usr_weight %></em></p>
+  <%# Size and Tips %>
   <div class="size_cards">
     <div class="size_range_schema">
       <div class="liste_size">
@@ -28,7 +28,7 @@
     <%# Supports Card %>
     <% if @support == "Surf" %>
       <div class="support_card">
-        <p>You should take a surf with approximatively this dimension : </p>
+        <p>Recommended surf size : </p>
         <p><%= @surf_size %></p>
         <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631027468/SportGear/Icones/Surf_hxu6da.png" />
       </div>
@@ -55,7 +55,7 @@
       </div>
     <% else %>
       <div class="support_card">
-        <p>You should take a twin with approximatively this dimension : </p>
+        <p>Recommended twintip size : </p>
         <p><%= @twin_size %></p>
         <img src="https://res.cloudinary.com/dqc8dpu1n/image/upload/v1630500815/SportGear/Icones/Twintip_zdg5rm.png" />
       </div>
@@ -81,10 +81,13 @@
               <br>
               <h3>About the Wind Range :</h3>
               <p>You should start kiteboarding in a wind range of 12 to 25 knots.</p>
-              <p>Under 12 knots it will be hard to fly your kite. Above 25 knots, wind start to be strong and it could be dangerous if you are beginner.</p>
+              <ul>
+                <li><p>Under 12 knots it will be hard to fly your kite.</p></li>
+                <li><p>Above 25 knots, wind start to be strong and it could be dangerous if you are beginner.</p></li>
+              </ul>
               <br>
-              <h3>About the twintip :</h3>
-              <p>Dimensions are given to help you choose a twintip. Bigger twintip is easier in lightwind but less playfull and vice versa.</p>
+              <h3>About the board :</h3>
+              <p>Dimensions are given to help you choose a board. Bigger boarde are easier in lightwind but less playfull and vice versa.</p>
             </div>
           </div>
         </div>
