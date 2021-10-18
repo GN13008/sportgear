@@ -6,10 +6,17 @@
       <hr>
       <div class="sport-cards">
       <% @sports.each do |sport| %>
-        <%= link_to sport_path(sport) do %>
-          <div class="sport-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.1)), url(<%= sport.cover_url %>)">
+        <% if sport.name != "Kite" %>
+          <div class="sport-card-category" style="background-image: linear-gradient(200deg, rgba(0,0,0,0.9), rgba(128,128,128,0.6)), url(<%= sport.cover_url %>)">
             <%= sport.name %>
+            <p>Comming Soon</p>
           </div>
+        <% else %>
+          <%= link_to sport_path(sport) do %>
+              <div class="sport-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.1)), url(<%= sport.cover_url %>)">
+                <%= sport.name %>
+              </div>
+          <% end %>
         <% end %>
       <% end %>
       </div>
