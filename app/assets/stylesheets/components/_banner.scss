@@ -1,14 +1,14 @@
 .banner-home {
-  min-height: 95vh;
+  min-height: 90vh;
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.2)),
   url("https://images.unsplash.com/photo-1512674570766-3e4bc9feb382?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  .banner-content {
-    // margin-top: 120px;
-  }
+  // .banner-content {
+  //   // margin-top: 120px;
+  // }
 }
 
 .banner-params {
@@ -30,7 +30,7 @@
   .banner-content {
     display: flex;
     flex-direction: column;
-    // margin: 40px 0;
+    margin: 40px 0;
     .content {
       justify-content: center;
     }

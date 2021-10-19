@@ -101,7 +101,7 @@
   <h2 class="text-center mt-4">Some kites that you will love</h2>
   <p class="text-justify"><%= @usr_lvl %></p>
   <p>Select a kite and get access to more informations : dealer, ambassador, brand, ... enjoy !</p>
-  <div class="cards mt-4">
+  <div class="cards mt-4 mb-4">
     <% @kites.each do |kite| %>
       <%= link_to kite_path(kite) do %>
         <div class="card-gear">
