@@ -16,6 +16,7 @@ class KitesController < ApplicationController
     @size_range_27_35 = 7
     @twin_size = "138 x 41"
     @surf_size = "5’7” - 24L"
+    @foil_board_size = "5’7” - 24L"
     if params[:sport_lvl].present?
       if params[:sport_lvl] == "Beginner"
         @usr_lvl = "You say that you have a #{params[:sport_lvl]} lvl in other watersports / boardsports. This selection is fully dedicated to your lvl ! Enjoy 🔥"
@@ -36,6 +37,8 @@ class KitesController < ApplicationController
       @size_range_27_35 = 7 + size_factor
       @usr_weight = "This following sizes are based on your weights (#{params[:weights]}):"
       @twin_size = twin_finder(params[:weights])
+      @surf_size = surf_finder(params[:weights])
+      @foil_board_size = foil_board_finder(params[:weights])
     end
 
   end
@@ -104,6 +107,42 @@ class KitesController < ApplicationController
       size = "142 x 43"
     when "> 95 kg"
       size = "151 x 44"
+    end
+    return size
+  end
+
+  def surf_finder(weights)
+    case weights
+    when "< 55 kg"
+      size = "5’7” - 24L"
+    when "55-65 kg"
+      size = "5’7” - 24L"
+    when "65-75 kg"
+      size = "5’7” - 24L"
+    when "75-85 kg"
+      size = "5’7” - 24L"
+    when "85-95 kg"
+      size = "5’7” - 24L"
+    when "> 95 kg"
+      size = "5’7” - 24L"
+    end
+    return size
+  end
+
+  def foil_board_finder(weights)
+    case weights
+    when "< 55 kg"
+      size = "5’7” - 24L"
+    when "55-65 kg"
+      size = "5’7” - 24L"
+    when "65-75 kg"
+      size = "5’7” - 24L"
+    when "75-85 kg"
+      size = "5’7” - 24L"
+    when "85-95 kg"
+      size = "5’7” - 24L"
+    when "> 95 kg"
+      size = "5’7” - 24L"
     end
     return size
   end
