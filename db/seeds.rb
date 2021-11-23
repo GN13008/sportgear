@@ -7,7 +7,7 @@ Sport.destroy_all
 puts "----- Seeding in process -----"
 puts "Create Wing and Kite"
 wing = Sport.create(name: "Wing", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627889955/SportGear/Sports/Wing_ykq4xn.png")
-kite = Sport.create(name: "Kite", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1627889955/SportGear/Sports/action_fone_bandit21_3_ewtdw3.jpg")
+kite = Sport.create(name: "Kite", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1637674146/SportGear/Sports/Kite_m6aeka.png")
 kitefoil = Sport.create(name: "Surf", cover_url: "https://res.cloudinary.com/dqc8dpu1n/image/upload/v1631017857/SportGear/Sports/bandeau-surf-foil_rkfpme.jpg")
 
 
