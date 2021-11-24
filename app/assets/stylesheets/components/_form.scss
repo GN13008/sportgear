@@ -3,6 +3,21 @@
   color: $font-dark;
 }
 
+.form-control {
+    color: $font-dark;
+    padding: 8px 32px;
+    border-radius: 8px;
+    border-color: $flash;
+    background: $flash;
+    font-size: 16px;
+    transition: background 0.1s ease;
+    opacity: 0.8;
+}
+
+.form-group {
+  color: $flash;
+}
+
 .support_selection {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

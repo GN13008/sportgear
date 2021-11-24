@@ -38,6 +38,6 @@ en:
   form:
     call: "Find The best Gear"
     weights: "Weights"
-    weights_question: "Enter your weights"
+    weights_question: "Your weights"
     lvl: "Your Lvl"
-    lvl_question: "Are you used to other board sports ?"
+    lvl_question: "Your level in other board sports ?"

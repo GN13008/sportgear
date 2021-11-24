@@ -24,6 +24,7 @@
   background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
   .banner-content {
     display: flex;
     flex-direction: column;
@@ -43,33 +44,34 @@
 }
 
 .banner-content {
-  color:white;
+  color: white;
   hr {
-    color: white;
-    background-color: white;
+    color: $flash;
+    background-color: $flash;
   }
   h1{
     font-size: 48px;
+  }
+  h3{
+    font-size: 20px;
   }
   padding-bottom: 150px;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
+  .banner-content {
+    padding-bottom: 0px;
+  }
   .banner-home {
-    height: auto;
-    padding: 24px 0;
     .banner-content {
-      margin-top: 0;
-      padding-bottom: 0px;
+      padding-bottom: 50px;
     }
   }
   .banner-params {
-    // height: auto;
-    // padding: 24px 0;
     .banner-content {
-      // margin-top: 0;
-      padding-bottom: 0px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 }
